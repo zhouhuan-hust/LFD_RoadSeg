@@ -1,0 +1,38 @@
+datasets:
+  dataset_name: 'kitti' # kitti or kittival
+  data_path: '/home/huan/FasterRoadSeg/LFD_RoadSeg/data/kitti'
+device: '1'
+outputs:
+  ckpt_path: 'outputs/kitti/checkpoints'
+  vis_path: 'outputs/kitti/results'
+models:
+  backbone: 'resnet18'
+  model_hub: 'model_hub'
+training:
+  state: True
+  scale_factor: 2
+  size: [375, 1240]
+  start_epoch: 0
+  max_epochs: 150
+  hide_bar: False
+  batch_size: 6
+  num_workers: 4
+  lr: 0.01
+# Generate evaluation results for kittival 5-fold cross-validation
+validating:
+  state: False
+  val_epoch: 150
+  vis: True
+# Generate prediction images for kitti online evaluation
+testing:
+  state: False
+  test_epoch: 150
+  vis: True
+eval_speed:
+  state: False
+  size: [375, 1240]
+  num_channels: 3
+  batch_size: 1
+  classes: 2
+  iter: 1000
+  alpha: 2
