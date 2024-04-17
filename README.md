@@ -56,11 +56,11 @@ data
 |        |--image_2
 |--kittival  
 |    |--exp1 
-|    |    |--test 
+|    |    |--testing 
 |    |    |   |--calib
 |    |    |   |--gt_image_2
 |    |    |   |--image_2
-|    |    |--train
+|    |    |--training
 |    |        |--calib
 |    |        |--gt_image_2
 |    |        |--image_2
